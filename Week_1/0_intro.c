@@ -27,12 +27,12 @@ int main(void){
 
     int counter = counter + 1;
     // or 
-    counter = counter++;
+    counter++;
     
     // if you want to -1 counter 
     counter = counter - 1;
     // or 
-    counter = counter--;
+    counter--;
 
     // compare
     
@@ -46,6 +46,33 @@ int main(void){
     }
     else{
         printf("num1 is not less than num2");
+    }
+
+    // Simple Yes and No
+
+    #include <stdio.h>
+
+    char key;
+    printf("\nEnter 'y' for execution or 'n' for cancelling execution: ");
+    scanf(" %c", &key);  // Note the space before %c to consume any leading whitespace
+    if (key == 'y' || key == 'Y') { 
+        printf("Code executed\n");
+        // code to execute sits here
+    } else if (key == 'n' || key == 'N') {
+        printf("Code not executed\n");
+        // code sits here
+    } else {
+        printf("Invalid input\n");
+    }
+
+    // while loop
+
+    int count;
+    printf("Enter how many times you wanna display some string : \n");
+    scanf("%d",&count);
+    while (count < 0) {
+        printf("Haggu is King of the world!\n");
+        count = count--;
     }
 
     return 0;
