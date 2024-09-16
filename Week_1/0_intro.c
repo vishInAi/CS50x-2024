@@ -1,11 +1,20 @@
 #include <stdio.h>
 
+void meow(int repeats);
+int add(int num1, int num2);
+
 int main(void){
+
+    printf("\n1.Writing Strings : \n");
+
+    // writing strings 
     char ans[299];
     printf("Haggu0p \n");
     printf("Input something a string maybe : ");
     fgets(ans, sizeof(ans), stdin);
     printf("The Input : %s\n",ans);
+
+    printf("\n2.Conditional : \n");
 
     // some Conditional
     int x,y;
@@ -23,6 +32,8 @@ int main(void){
         printf("Both x and y are equal you see!");
     }
 
+    printf("\n3.Increment Decrement : \n");
+
     // making a counter variable
 
     int counter = counter + 1;
@@ -34,19 +45,7 @@ int main(void){
     // or 
     counter--;
 
-    // compare
-    
-    int a,b;
-    printf("enter some value of num1 : ");
-    scanf("%d",&a);
-    printf("enter some value of num2 : ");
-    scanf("%d",&b);
-    if (a<b){
-        printf("num1 is less than num2");
-    }
-    else{
-        printf("num1 is not less than num2");
-    }
+    printf("\n4.Key Ops using conditionals : \n");
 
     // Simple Yes and No
 
@@ -65,15 +64,53 @@ int main(void){
         printf("Invalid input\n");
     }
 
+    printf("\n5.While Loop : \n");
+
     // while loop
 
     int count;
     printf("Enter how many times you wanna display some string : \n");
     scanf("%d",&count);
-    while (count < 0) {
+    while (count > 0) {
         printf("Haggu is King of the world!\n");
-        count = count--;
+        count--;
     }
 
+    printf("\n6.for loop : \n");
+
+    // the above while loop code in for loop 
+    for (int i = 0; i < 3; i++){
+        printf("Haggu is King of the World!\n");
+    }
+
+    printf("\n7.Function calling : \n");
+     
+    int repeats;
+    printf("Enter how many times you wanna repeat cat meows : \n");
+    scanf("%d", &repeats);
+    meow(repeats);
+
+    // simple calculation made complicated fr
+
+    printf("\n8.Function Nesting it is : \n");
+
+    printf("\nImitation of addition (simple add calc) :");
+    int num1;
+    int num2;
+    printf("\nInput first number : ");
+    scanf("%d",&num1);
+    printf("\nInput second number : ");
+    scanf("%d",&num2);
+    printf("\nAddition for ya folks : %d \n", add(num1,num2));
+
     return 0;
+}
+int add(int num1, int num2){
+    return num1+num2;
+}
+void meow(int repeats){
+    for(int j = 0;j < repeats; j++){
+        printf("meow");
+    }
+    printf("\n");
 }
